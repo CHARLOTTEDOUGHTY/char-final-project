@@ -3,6 +3,10 @@
 {% block content %}
 <article class="container">
   <div class="row">
+  {% for entry in data.members %}
+  <div> class="col-sm-6 col-lg-3" </div>
+  <p>{{ entry.title }}, {{ entry.date }}, {{ entry.url}}</p>
+{% endfor %}
     <div class="col-sm-4 left-rail">
       {% block info %}{% endblock %}
     </div>
