@@ -4,8 +4,12 @@
 <article class="container">
   <div class="row">
     <div class="col-sm-4 left-rail">
-   </div>
-   </div>
-   </article>
-   {% endblock %}
+      {% block info %}{% endblock %}
+    </div>
+    <div class="col-sm-8">
+      {% block story %}{% endblock %}
+    </div>
+  </div>
+</article>
+{% endblock %}
    

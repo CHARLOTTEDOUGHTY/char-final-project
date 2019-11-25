@@ -1,6 +1,6 @@
 {% extends '_layouts/base.njk' %}
 
-{% block page_title %}About | Queen {% endblock %}
+{% block page_title %} About | Queen {% endblock %}
 
 {% block content %}
 
@@ -11,7 +11,10 @@
     </div>
   </div>
   <div class="row">
-    <div class="col">
+    <div class="col-sm-6">
+    {% for member in data.members %}
+  <p>{{ member.name }} {{ member.instrument }} {{ entry.url}}</p>
+{% endfor %}
       <p>
        <a href="https://en.wikipedia.org/wiki/Queen_(band)">link to source</a> <p>Queen are a British rock band formed in London in 1970. Their classic line-up was Freddie Mercury (lead vocals and piano), Brian May (lead guitar and vocals), Roger Taylor (drums and vocals) and John Deacon (bass guitar). Their earliest works were influenced by progressive rock, hard rock and heavy metal, but the band gradually ventured into more conventional and radio-friendly works by incorporating further styles, such as arena rock and pop rock. </p>
 
@@ -19,13 +22,6 @@
 
         <P>The band's 1977 album News of the World contained "We Will Rock You" and "We Are the Champions", which have become anthems at sporting events. By the early 1980s, Queen were one of the biggest stadium rock bands in the world. "Another One Bites the Dust" (1980) became their best-selling single, while their 1981 compilation album Greatest Hits is the best-selling album in the UK and is certified eight times platinum in the US. Their performance at the 1985 Live Aid concert has been ranked among the greatest in rock history by various publications. In August 1986, Mercury gave his last performance with Queen at Knebworth, England. In 1991, he died of bronchopneumonia - a complication of AIDS, and Deacon retired in 1997. Since 2004, May and Taylor have toured under the "Queen +" name with vocalists Paul Rodgers and Adam Lambert. </P>
       </p>
-      <ul> 
-        {% for book in data.books %}
-          <li>{{ book.title }}, {{ book.author }}</li>
-        {% else %}
-          <li>This would display if the 'books' collection were empty</li>
-        {% endfor %}
-     </ul>
 </div>
     </div>
     {% include "_partials/members-cards.njk"%}
