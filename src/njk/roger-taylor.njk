@@ -1,15 +1,2 @@
 {% extends '_layouts/detail.njk' %}
-
-{% block info %}
-  <img src="img/members/roger-taylor-bw.jpg">
-{% endblock %}
-
-{% block story %}
-  <h2>Roger Taylor</h2>
-  {% for member in data.members %}
-  {{ member.name }} {{ member.instrument }} {{ member.birthplace}} {{member.birthdate}} {{member.tenure}} {{ member.text [0] }}
-{% endfor %}
-{% endblock %}
-
-
-
+{% set members = data.members[2] %}

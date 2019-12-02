@@ -1,15 +1,52 @@
 {% extends '_layouts/base.njk' %}
-
+{% for member in data.members %}
 {% block content %}
 <article class="container">
   <div class="row">
-    <div class="col-sm-4 left-rail">
-      {% block info %}{% endblock %}
+  <div class="col-sm-4 left-rail">
+  <img src="{{member.imagebw}}" class="img fluid" alt="...">
     </div>
-    <div class="col-sm-8">
-      {% block story %}{% endblock %}
+    <h1>{{ members.name }}</h1>\
+    <p> {{members.text | safe}}</p>
+    {% endblock %}
+    {% endfor %}
     </div>
-  </div>
+    </div>
 </article>
-{% endblock %}
+
+{% block discography %}
+<article class="container">
+  <div class="row">
+  <div class="col-sm-4 left-rail">
+  <ul class="list-unstyled">
+  <li class="media">
+    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">List-based media object</h5>
+      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+  </li>
+  <li class="media my-4">
+    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">List-based media object</h5>
+      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+  </li>
+  <li class="media">
+    <img class="mr-3" src=".../64x64" alt="Generic placeholder image">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">List-based media object</h5>
+      Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+  </li>
+</ul>
+  <img src="{{discography.image}}" class="img fluid" alt="...">
+    </div>
+    <h4>{{ discography.title }}</h4>
+    <h6> {{discography.year}}</h6>
+    {% endblock %}
+    </div>
+    </div>
+</article>
    
