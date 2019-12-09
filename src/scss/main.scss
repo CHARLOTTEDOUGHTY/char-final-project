@@ -21,3 +21,63 @@
 // Import partials
 @import "nav";
 @import "jumbotron";
+
+a{
+  color: red;
+}
+
+h4{
+  color: white;
+}
+
+
+html body {
+  background-color: #ffc0cb;
+
+}
+
+.carousel{
+  height: 300px;
+  padding-bottom: 330px;
+}
+
+.carousel-item{
+  height: 500px;
+}
+h1 {
+  font-family: 'Indie Flower', cursive, 'Gloria Hallelujah', cursive;
+  text-align: center;
+  color: black;
+
+}
+
+h2 {
+  font-family: 'Indie Flower', cursive, 'Gloria Hallelujah', cursive;
+  text-align: center;
+  color: black;
+}
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create two equal columns that floats next to each other */
+.card{
+  padding: 10px;
+}
+
+p {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+}
